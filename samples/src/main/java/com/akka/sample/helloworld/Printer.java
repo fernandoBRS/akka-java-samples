@@ -1,4 +1,4 @@
-package com.akka.sample;
+package com.akka.sample.helloworld;
 import akka.actor.AbstractActor;
 import akka.actor.Props;
 import akka.event.Logging;

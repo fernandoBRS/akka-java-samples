@@ -1,12 +1,11 @@
-package com.akka.sample;
+package com.akka.sample.helloworld;
 import java.io.IOException;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
-import com.akka.sample.Greeter.Greet;
-import com.akka.sample.Greeter.WhoToGreet;
+import com.akka.sample.helloworld.Greeter.*;
 
-public class App {
-    public static void main(String[] args) {
+public class HelloWorld {
+    public void Run() {
         final ActorSystem system = ActorSystem.create("samplesSystem");
 
         try {

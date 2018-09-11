@@ -1,8 +1,8 @@
-package com.akka.sample;
+package com.akka.sample.helloworld;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.Props;
-import com.akka.sample.Printer.Greeting;
+import com.akka.sample.helloworld.Printer.Greeting;;
 
 public class Greeter extends AbstractActor {
     private final String message;

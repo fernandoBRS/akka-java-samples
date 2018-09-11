@@ -6,21 +6,21 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Launch)-App<akka-quickstart-java>",
+            "name": "Debug (Launch)-App<samples>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
             "stopOnEntry": false,
             "mainClass": "com.akka.sample.App",
             "args": "",
-            "projectName": "akka-quickstart-java"
+            "projectName": "samples"
         },
         {
             "type": "java",
             "name": "Debug (Attach)",
             "request": "attach",
             "hostName": "localhost",
-            "port": "<debug port of remote debuggee>"
+            "port": 8000
         }
     ]
 }
