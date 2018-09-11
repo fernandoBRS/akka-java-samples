@@ -2,12 +2,13 @@ package com.akka.sample.helloworld;
 import java.io.IOException;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
-import com.akka.sample.helloworld.Greeter.*;
+import com.akka.sample.helloworld.models.actors.*;
+import com.akka.sample.helloworld.models.greeting.*;
 
 public class HelloWorld {
     public void Run() {
         final ActorSystem system = ActorSystem.create("samplesSystem");
-
+        
         try {
             final ActorRef printerActor = system.actorOf(Printer.props(), "printerActor");
             final ActorRef howdyGreeter = system.actorOf(Greeter.props("Howdy", printerActor), "howdyGreeter");

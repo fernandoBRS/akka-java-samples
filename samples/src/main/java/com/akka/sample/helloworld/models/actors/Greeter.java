@@ -1,8 +1,8 @@
-package com.akka.sample.helloworld;
+package com.akka.sample.helloworld.models.actors;
 import akka.actor.AbstractActor;
 import akka.actor.ActorRef;
 import akka.actor.Props;
-import com.akka.sample.helloworld.Printer.Greeting;;
+import com.akka.sample.helloworld.models.greeting.*;
 
 public class Greeter extends AbstractActor {
     private final String message;
@@ -17,20 +17,7 @@ public class Greeter extends AbstractActor {
     static public Props props(String message, ActorRef printerActor) {
         return Props.create(Greeter.class, () -> new Greeter(message, printerActor));
     }
-
-    static public class WhoToGreet {
-        public final String who;
-
-        public WhoToGreet(String who) {
-            this.who = who;
-        }
-    }
-
-    static public class Greet {
-        public Greet() {
-        }
-    }
-
+    
     @Override
     public Receive createReceive() {
     return receiveBuilder()
