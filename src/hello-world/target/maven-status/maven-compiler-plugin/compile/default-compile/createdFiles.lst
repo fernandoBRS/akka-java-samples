@@ -1,0 +1,6 @@
+com/akka/sample/Printer.class
+com/akka/sample/Greeter.class
+com/akka/sample/App.class
+com/akka/sample/Printer$Greeting.class
+com/akka/sample/Greeter$Greet.class
+com/akka/sample/Greeter$WhoToGreet.class
