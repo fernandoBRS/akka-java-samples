@@ -4,12 +4,11 @@ import static org.junit.Assert.assertEquals;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import com.akka.sample.Greeter.Greet;
-import com.akka.sample.Greeter.WhoToGreet;
-import com.akka.sample.Printer.Greeting;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.testkit.javadsl.TestKit;
+import com.akka.sample.helloworld.models.actors.Greeter;
+import com.akka.sample.helloworld.models.greeting.*;
 
 public class AppTest {
     static ActorSystem system;
