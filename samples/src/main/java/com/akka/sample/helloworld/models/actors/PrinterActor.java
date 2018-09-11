@@ -6,11 +6,11 @@ import akka.event.Logging;
 import akka.event.LoggingAdapter;
 import com.akka.sample.helloworld.models.greeting.Greeting;
 
-public class Printer extends AbstractActor {
+public class PrinterActor extends AbstractActor {
     private LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
 
     static public Props props() {
-        return Props.create(Printer.class, () -> new Printer());
+        return Props.create(PrinterActor.class, () -> new PrinterActor());
     }
 
     @Override

@@ -7,7 +7,7 @@ import org.junit.Test;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.testkit.javadsl.TestKit;
-import com.akka.sample.helloworld.models.actors.Greeter;
+import com.akka.sample.helloworld.models.actors.GreeterActor;
 import com.akka.sample.helloworld.models.greeting.*;
 
 public class AppTest {
@@ -27,7 +27,7 @@ public class AppTest {
     @Test
     public void testGreeterActorSendingOfGreeting() {
         final TestKit testProbe = new TestKit(system);
-        final ActorRef helloGreeter = system.actorOf(Greeter.props("Hello", testProbe.getRef()));
+        final ActorRef helloGreeter = system.actorOf(GreeterActor.props("Hello", testProbe.getRef()));
 
         helloGreeter.tell(new WhoToGreet("Akka"), ActorRef.noSender());
         helloGreeter.tell(new Greet(), ActorRef.noSender());

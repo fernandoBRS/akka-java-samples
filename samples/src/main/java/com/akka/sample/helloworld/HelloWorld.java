@@ -10,10 +10,10 @@ public class HelloWorld {
         final ActorSystem system = ActorSystem.create("samplesSystem");
         
         try {
-            final ActorRef printerActor = system.actorOf(Printer.props(), "printerActor");
-            final ActorRef howdyGreeter = system.actorOf(Greeter.props("Howdy", printerActor), "howdyGreeter");
-            final ActorRef helloGreeter = system.actorOf(Greeter.props("Hello", printerActor), "helloGreeter");
-            final ActorRef goodDayGreeter = system.actorOf(Greeter.props("Good day", printerActor), "goodDayGreeter");
+            final ActorRef printerActor = system.actorOf(PrinterActor.props(), "printerActor");
+            final ActorRef howdyGreeter = system.actorOf(GreeterActor.props("Howdy", printerActor), "howdyGreeter");
+            final ActorRef helloGreeter = system.actorOf(GreeterActor.props("Hello", printerActor), "helloGreeter");
+            final ActorRef goodDayGreeter = system.actorOf(GreeterActor.props("Good day", printerActor), "goodDayGreeter");
 
             // ActorRef.noSender() means there is not actor to reply to
             howdyGreeter.tell(new WhoToGreet("Akka"), ActorRef.noSender());
