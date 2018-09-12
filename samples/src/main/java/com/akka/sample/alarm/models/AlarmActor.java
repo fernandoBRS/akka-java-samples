@@ -7,10 +7,17 @@ import akka.event.Logging;
 import akka.event.LoggingAdapter;
 
 public class AlarmActor extends AbstractLoggingActor {
-    private Receive enabled;
-    private Receive disabled;
-    private final String password;
     private LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
+    private final String password;
+
+    private Receive enabled = receiveBuilder()
+        .match(Activity.class, this::onActivity)
+        .match(Disable.class, this::onDisable)
+        .build();
+
+    private Receive disabled = receiveBuilder()
+        .match(Enable.class, this::onEnable)
+        .build();
 
     public AlarmActor(String password) {
         this.password = password;
@@ -21,18 +28,13 @@ public class AlarmActor extends AbstractLoggingActor {
     }
 
     @Override
+    public void preStart() {
+        getContext().become(disabled);
+    }
+
+    @Override
     public Receive createReceive() {
-        enabled = receiveBuilder()
-            .match(Activity.class, this::onActivity)
-            .match(Disable.class, this::onDisable)
-            .build();
-
-        disabled = receiveBuilder()
-            .match(Enable.class, this::onEnable)
-            .build();
-
-        // The default behavior changes only when an Enable message is received
-        return disabled;
+        return enabled;
     }
 
     private void onActivity(Activity ignored) {
