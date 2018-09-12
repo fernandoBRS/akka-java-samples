@@ -14,3 +14,5 @@ Consider the case of a burglar alarm system; it can be enabled and disabled with
 To get a better overview, this is the Finite State Machine for this scenario:
 
 ![Alarm Finite State Machine](../images/alarm.jpg)
+
+You can find the source code [here](https://github.com/fernandoBRS/akka-java-samples/tree/master/samples/src/main/java/com/akka/sample/alarm).
