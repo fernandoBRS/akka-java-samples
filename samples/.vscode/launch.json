@@ -13,7 +13,7 @@
             "stopOnEntry": false,
             "mainClass": "com.akka.sample.App",
             "args": "",
-            "projectName": "samples"
+            "projectName": "app"
         },
         {
             "type": "java",
