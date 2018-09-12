@@ -4,4 +4,5 @@ Samples to build reactive, concurrent, and distributed applications in Java usin
 
 ## Samples
 
-- [Hello World](./docs/hello-world.md)
+- [Hello World: Changing Actor State](./docs/hello-world.md)
+- [Burglary Alarm: Changing Actor Behavior (Finite State Machine)](./docs/alarm.md)
