@@ -6,6 +6,7 @@ Samples to build reactive, concurrent, and distributed applications in Java usin
 
 - [Hello World: Changing Actor State](./docs/hello-world.md)
 - [Burglary Alarm: Changing Actor Behavior (Finite State Machine)](./docs/alarm.md)
+- [Transient Fault Handling: Implementing a Supervisor](./docs/supervisor.md)
 
 ## Prerequisites
 
