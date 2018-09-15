@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package = "com.akka.sample.serialization.models.greet";
+
+// Commands
+
+message Greet {
+    
+}
+
+// Events
+
+message WhoToGreet {
+    string who = 1;
+}
+
+
