@@ -16,7 +16,7 @@ public class SupervisorChild {
             for (int i = 0; i < 10; i++) {
                 supervisor.tell(new Command(), ActorRef.noSender());
             }
-            
+
             System.out.println(">>> Press ENTER to exit <<<");
             System.in.read();
         } catch (IOException ex) {

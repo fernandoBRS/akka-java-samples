@@ -1,0 +1,10 @@
+syntax = "proto3";
+option java_package = "com.akka.sample.serialization.models.print";
+
+// Events
+
+message Greeting {
+    string message = 1;
+}
+
+
